@@ -30,13 +30,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    When using .forEach the array is acted upon in place, where as with .map,
+    a new array is returned with the resulting values.
+
 2. What is the difference between a function and a method?
+
+    A function exits outside of an object(although it itself is an object).
+    A method is a member of an object.
 
 3. What is closure?
 
+    A nested function that captures a variable from the its outer scope, like below.
+
+    function outer(){
+        let captured = 0;
+        return () => captured;// this anonamous funtion is the closure
+    }
+
 4. Describe the four rules of the 'this' keyword.
 
+    1. Global: This refers to the document or window when used it the global scope
+    2. Implicit: This bind to object left of the "." opererator.
+    3. New keyword: This is bound to a new object and that object is returned.
+    4. explict: Choosing what this is bound to by appending method calls with call, bind, or apply.
+
 5. Why do we need super() in an extended class?
+
+    super invokes the constructor of the parent class, and initializes inhieted attributes.
 
 ## Project Set up
 
